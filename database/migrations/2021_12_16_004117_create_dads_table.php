@@ -8,10 +8,8 @@ class CreateDadsTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('dads', function (Blueprint $table) {
             $table->id();
@@ -21,10 +19,8 @@ class CreateDadsTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('dads');
     }
