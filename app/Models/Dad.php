@@ -15,7 +15,7 @@ class Dad extends Model
         return $this->hasMany(Child::class);
     }
 
-    public function habits()
+    public function habits(): \Illuminate\Database\Eloquent\Relations\HasMany
     {
         return $this->hasMany(Habit::class);
     }

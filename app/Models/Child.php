@@ -9,7 +9,7 @@ class Child extends Model
 {
     use HasFactory;
 
-    public function dad()
+    public function dad(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Dad::class);
     }
