@@ -8,10 +8,8 @@ class CreateChildrenTable extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
         Schema::create('children', function (Blueprint $table) {
             $table->id();
@@ -21,10 +19,8 @@ class CreateChildrenTable extends Migration
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
         Schema::dropIfExists('children');
     }

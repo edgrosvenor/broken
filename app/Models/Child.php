@@ -10,12 +10,12 @@ class Child extends Model
 {
     use HasFactory;
 
-    public function dad()
+    public function dad(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {
         return $this->belongsTo(Dad::class);
     }
 
-    public function toys(): HasMany
+    public function toys(): \Illuminate\Database\Eloquent\Builder
     {
         return $this->hasMany(Toy::class)->where('broken_at', null);
     }
